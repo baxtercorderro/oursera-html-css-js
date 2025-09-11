@@ -6,24 +6,24 @@
 
 h1 {
   text-align: center;
-  margin-bottom: 45px;
+  margin-bottom: 25px;
 }
 
-/* Section Container */
+.row {
+  width: 100%;
+}
+
 .section {
   background-color: #f0f0f0;
   border: 1px solid black;
-  margin: 15px;
-  padding: 15px;
   position: relative;
+  margin: 1.5%; /* Adds spacing around sections */
+  padding-top: 50px; /* Space for the title */
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
 }
 
-/* Paragraph text inside the section */
-.section p {
-  margin-top: 40px; /* Push text down to not overlap with title */
-}
-
-/* Section Title */
 .section-title {
   position: absolute;
   top: 0;
@@ -38,10 +38,9 @@ h1 {
   font-size: 1.25em;
 }
 
-/* Specific title colors */
-.chicken { background-color: #FFB6C1; } /* Light Pink */
-.beef    { background-color: #E6B0AA; } /* Light Red */
-.sushi   { background-color: #FDFD96; } /* Light Yellow */
+.chicken { background-color: #FFB6C1; }
+.beef    { background-color: #E6B0AA; }
+.sushi   { background-color: #FDFD96; }
 
 
 /********** Tablet View **********/
@@ -50,10 +49,10 @@ h1 {
     float: left;
   }
   .section:nth-of-type(1), .section:nth-of-type(2) {
-    width: calc(50% - 30px); /* 50% width minus margins */
+    width: 47%; /* Two columns with margin in between */
   }
   .section:nth-of-type(3) {
-    width: calc(100% - 30px); /* Full width minus margins */
+    width: 97%; /* Full width row with margins */
   }
 }
 
@@ -62,7 +61,6 @@ h1 {
 @media (min-width: 992px) {
   .section {
     float: left;
-    width: calc(33.33% - 30px); /* 1/3 width minus margins */
+    width: 30.33%; /* Three columns with margins */
   }
-
 }
